@@ -16,8 +16,7 @@ function Card(props){
         <div class="absolute bottom-4 left-4 text-left">
             <h1 class="text-lg font-semibold text-white">{props.userName}</h1>
             <p class="mt-2 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            debitis?
+            {props.des}
             </p>
             <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold">
             {props.btnText || "Visit Me"} →

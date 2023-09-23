@@ -9,7 +9,8 @@ function App() {
   //object
   let myObj={
     username:"pankaj",
-    age:21
+    age:21,
+    userDesc:"I am a programmer, learner"
   }
 
   //array
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <h1 className='bg-green-500 text-black rounded-xl px-5 font-bold'>Tailwind Test</h1>
-      <Card userName="chaiaurcode" btnText="Click Me"/>
+      <Card userName="chaiaurcode" btnText="Click Me" des="I am a programer, leraner, explorer"/>
       <Card userName="hitesh" btnText="NewClickMe"/>
       <Card userName="Pankaj" />
       {/* Here value of btnText is not passed so it will take dafault value set in card.jsx */}
