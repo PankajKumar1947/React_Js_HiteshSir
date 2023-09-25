@@ -50,8 +50,7 @@ const passwordRef=useRef(null);
  },[length,numberAllowed,charAllowed,passwordGenerator])
 
   return (
-    <>
-      
+    <>      
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800'>
       <h1 className='text-4xl text-center text-white my-3'>Password Generator</h1>
         <div className='flex shadow rounded-lg overflow-hidden mb-4'>
