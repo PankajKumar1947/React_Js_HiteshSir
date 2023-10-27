@@ -3,25 +3,28 @@ import conf from '../conf.js'
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
-    client=new Client();
-    account;
+    client=new Client();// making client
+    account;// declaring account variable to make an account.
     constructor(){
+        //applying method on client
         this.client
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
+        //creating account
         this.account=new Account(this.client);
 
     }
 
-    // making account
+    // making account : createAccount() --> it is a promises.
     async createAccount({email,password,name}){
         try{
             const userAccount=  await this.account.create(ID.unique(),email,password,name);
             if(userAccount){
-                //call another method.
-                return this.login({email,password});
+                //call another method if a user exist already or user created successfully.
+                return this.login({email,password});//directly call login if account is created.
 
             }else{
+                //if account is not created successfully.
                 return userAccount;
             }
         }catch(error){
@@ -29,6 +32,7 @@ export class AuthService {
         }
     }
 
+    //login method.
     async login({email,password}){
         try{
             return await this.account.createEmailSession(email,password);
