@@ -3,3 +3,7 @@
 
 # Build Auth Service
 - src/appwrite/auth.js
+
+# Config DB
+- src/apprwrite/confi.js
+-- createPost, updatePost, getPost, deletePost, fileUpload, filePreview

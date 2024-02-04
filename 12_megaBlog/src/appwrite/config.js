@@ -21,7 +21,7 @@ export class Service{
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
+                slug,//slug is like unique id
                 {
                     title,
                     content,
@@ -36,7 +36,7 @@ export class Service{
     }
 
     //update the post
-    //here slug is passed for post id or document id
+    //here slug is passed for identifying the post by id or document id
     async updatePost(slug,{title,content,featuredImage,status}){
         try{
             return await this.databases.updateDocument(
