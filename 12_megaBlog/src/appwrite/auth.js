@@ -42,6 +42,7 @@ export class AuthService {
         }
     }
 
+    //check user is logged in or not 
     async getCurrentUser(){
         try{
             return await this.account.get();
@@ -53,6 +54,7 @@ export class AuthService {
         return null;
     }
 
+    //logout
     async logout(){
         try{
             await this.account.deleteSessions();
