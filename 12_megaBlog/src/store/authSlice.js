@@ -1,29 +1,3 @@
-# SET ENV and Appwrite 
-- .env and how to import it Learn't
-
-# Build Auth Service
-- src/appwrite/auth.js
-
-# Config DB
-- src/apprwrite/confi.js
--- createPost, updatePost, getPost, deletePost, fileUpload, filePreview
-
-# Config redux toolkit
-- 1. store/store.js
-```javascript
-import { configureStore } from "@reduxjs/toolkit";
-
-const store=configureStore({
-    reducer:{
-
-    }
-});
-
-export default store;
-```
-
-- 2. store/authSlice.js
-```javascript
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={
@@ -50,4 +24,3 @@ const authSlice=createSlice({
 export const {login,logout}=authSlice.actions;
 
 export default authSlice.reducer;
-```
