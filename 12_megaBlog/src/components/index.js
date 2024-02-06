@@ -10,5 +10,6 @@ export {
     Header,
     Footer,
     Logo,
-    LogoutBtn
+    LogoutBtn,
+    Container
 }
